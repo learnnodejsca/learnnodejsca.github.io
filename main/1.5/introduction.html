@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction :: Learn Node.js by Alex Kluew</title>
+    <link rel="canonical" href="https://course.learnnodejs.dev/main/1.5/introduction.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173618647-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-173618647-1')</script>
+  </head>
+  <body class="article">
+<script async data-uid="b7a10c8563" src="https://wondrous-experimenter-4427.ck.page/b7a10c8563/index.js"></script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://course.learnnodejs.dev">Learn Node.js by Alex Kluew</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://gumroad.com/l/javascript" target="_blank">Buy on Gumroad</a>
+        <a class="navbar-item" href="https://leanpub.com/learnnodejs" target="_blank">Buy on LeanPub</a>
+        <a class="navbar-item" href="https://twitter.com/alexkluew_dev">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512">
+              <path fill="#57aaee"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="main" data-version="1.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Learn Node.js</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Learn Node.js</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sequelize.js.html">Sequelize.js</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="seo.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maps.html">Maps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="deployment.html">Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Learn Node.js</span>
+    <span class="version">1.5</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Learn Node.js</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li>Learn Node.js</li>
+    <li><a href="introduction.html">Introduction</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/learnnodejsca/learnnodejs/edit/master/main/modules/ROOT/pages/introduction.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Introduction</h1>
+<div class="sect1">
+<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Project <a href="http://elderoostalpha.herokuapp.com">“Elderoost”</a> is a full-stack senior residence application in which users can search, review, and add residence information. It was created with intention of providing useful information about a specific retirement home for future residents. Moreover, there was an aim that the application would provide a safe space for residents of these senior residences to review their living environments. Some of the general requirements that I created for this project :</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Node.js</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> PostgreSQL database</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> SEO optimized</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Responsive design</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Fast loading times</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> JavaScript codebase</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Minimum dependencies</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Interactive maps</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Legible font</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Handlebars templates</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Fast search</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> User accounts</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Administrative Dashboard</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Comments</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Reviews</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> News Articles</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Email notifications</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prior to beginning the project, I created several requirements. First and foremost, I wanted it to be written in JavaScript using Node.js. Next, I wanted to use the PostgreSQL database as my data storage of choice. One of the reasons for selecting PostgreSQL is that it has a wonderful PostGIS extension which makes interacting with geolocation data much easier than other solutions.</p>
+</div>
+<div class="paragraph">
+<p>The end goal of the application would be to index well in the search engines. This is done primarily through search engine optimization (SEO) work, responsive design, and fast loading times on mobile and on desktop. To stick to these requirements, I made sure to use the minimum amount of  dependencies that I needed in order to run the project.</p>
+</div>
+<div class="paragraph">
+<p>Moreover, I wanted the actual search to be visual and done via interactions with some sort of a map. The reason for this was simple, when searching for a new residence I wanted the user to search by area first and other information second. Map interface when it comes to searching by geographical area comes natural.</p>
+</div>
+<div class="paragraph">
+<p>I wanted to provide to the user a secondary way of searching that was not reliant on a map. Thus, Elderoost should retrieve residence entities through textual search means and not visual alone. Next, I wanted to ensure that there were secure user accounts. This decision was two fold : (1) I wanted to keep the data and not offload it to a 3rd party social login solution, and (2) I wanted to obtain email addresses of users such that I could notify them of product updates. Thus, I also had a requirement that there would be automated notifications to the users via email.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the project should maintain some sort of an administrative dashboard to manage all of the data. Therefore, there needed to be some kind of roles implementation for authorization part of the application. A regular user shouldn’t be able to access this dashboard.</p>
+</div>
+<div class="paragraph">
+<p>I hope that you can see similarities of this project that could be transferred to your daily JavaScript workings. Features, such as secure user accounts, are useful and are required in many modern applications.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_users"><a class="anchor" href="#_users"></a>Users</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Prior to going through the code, I wanted to go through the three different users in the application and their individual use cases. This provided me some guidance during the building phase of the project.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/users-usecases.png" alt="users usecases">
+</div>
+<div class="title">Figure 1. User use cases design</div>
+</div>
+<div class="paragraph">
+<p>Elderoost has three types of users : (1) a guest user, (2) registered user, and (3) an admin user. I wanted the guest to use the application but be directed towards creating an account and opening an array of features once they did that. However, I understood that not everyone wants to create an account so I wanted to leave some core features available for the guest. I wanted them to be able to browse the content and to search through the content. Beyond these two tasks, the guest user should be directed to creating an account feature.</p>
+</div>
+<div class="paragraph">
+<p>Once a user registered, they are opened up to the “default feature” list that I show in the graphic above. Besides the typical user management, the user has the ability to add more data to our project. This decision to force user accounts was made to minimize the amount of spam and increase value when compared to a guest user account.</p>
+</div>
+<div class="paragraph">
+<p>An admin user would then have access to all of the features of the guest user and a regular user, with the added benefit of an added administrative dashboard. In the dashboard, I wanted the user to have control over the residences and news articles. However, it did not make sense to allow admin users to create reviews or submit them on someone else’s behalf. Also, the control of the users would be done solely by interacting with the database. I did not want to build an interface for this entity.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture"><a class="anchor" href="#_architecture"></a>Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the requirements for project Elderoost was to maintain the dependency list to a minimum.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/overall-architecture-screen.png" alt="Project Elderoost application architecture overview">
+</div>
+<div class="title">Figure 2. Project Elderoost application architecture overview</div>
+</div>
+<div class="paragraph">
+<p>Let’s take a look at the overall application architecture. I can do that through the analysis of the packages that are required to run everything. Node.js shines in the composition of different modules that bring the overall application to life. This, also, means that you have to be careful in the packages that you pick and ensure that you don’t pick an old and outdated package.</p>
+</div>
+<div class="paragraph">
+<p>In the image above, I grouped some of the modules by their function in the application. Let’s take a look at the modules and see where each one fits in</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">express</dt>
+<dd>
+<p>Application server responsible for our app&#8217;s functionality</p>
+</dd>
+<dt class="hdlist1">path</dt>
+<dd>
+<p>Core node.js module that allows us to specify locations within our project</p>
+</dd>
+<dt class="hdlist1">cookie-parser</dt>
+<dd>
+<p>Parse cookies</p>
+</dd>
+<dt class="hdlist1">generate-password</dt>
+<dd>
+<p>Used to generate secure password reset token</p>
+</dd>
+<dt class="hdlist1">client-sessions</dt>
+<dd>
+<p>Module used for creation of <code>session</code> object to maintain user data and maintenance of encrypted cookie</p>
+</dd>
+<dt class="hdlist1">bcrypt</dt>
+<dd>
+<p>Used to encrypt password into a hash</p>
+</dd>
+<dt class="hdlist1">hbs</dt>
+<dd>
+<p>Handlebars templating engine that allows us to create views using hbs templating language</p>
+</dd>
+<dt class="hdlist1">morgan</dt>
+<dd>
+<p>Helps with logging</p>
+</dd>
+<dt class="hdlist1">helmet</dt>
+<dd>
+<p>Improves security of our application</p>
+</dd>
+<dt class="hdlist1">sendgrid/mail</dt>
+<dd>
+<p>Sends emails to our users</p>
+</dd>
+<dt class="hdlist1">sequelize</dt>
+<dd>
+<p>Module responsible for interactions with our database of choice</p>
+</dd>
+<dt class="hdlist1">pg</dt>
+<dd>
+<p>PostgreSQL connector</p>
+</dd>
+<dt class="hdlist1">pg-hstore</dt>
+<dd>
+<p>PostgreSQL connector</p>
+</dd>
+<dt class="hdlist1">csurf</dt>
+<dd>
+<p>Module responsible for CSRF protection and adding csrf token to our request object</p>
+</dd>
+<dt class="hdlist1">sitemap</dt>
+<dd>
+<p>Module responsible for generating a proper sitemap which is then submitted to the search engines</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_folder_structure"><a class="anchor" href="#_folder_structure"></a>Folder Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we take a look at how node.js application works along with the express framework, we can see a close resemblance to the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">model-view-controller</a> (MVC) model. Thus, the basic idea about the project’s file structure is around the MVC architecture. It feels natural to structure the project this way.</p>
+</div>
+<div class="imageblock right text-center">
+<div class="content">
+<img src="_images/folder-structure-screen.png" alt="folder structure screen" width="250">
+</div>
+<div class="title">Figure 3. Node.js app simplified</div>
+</div>
+<div class="paragraph">
+<p>When a client opens up a web browser and types in the app’s URL, our express web-server catches the request and passes on to its router object. Here in the process express framework does a check if the URL is good and we can proceed, or it is a bad URL and an error is spit back out to the user. The diagram on the left assumes a correct user-flow.</p>
+</div>
+<div class="paragraph">
+<p>The router then looks at the appropriate route handler to pass on the request. In our case, our route handlers are conveniently located in the <code>/routes</code> folder of the project.</p>
+</div>
+<div class="paragraph">
+<p>From the router handler, our app can interact with our models that are located in our database and then pass this data on to the handlebars view. However, the handler doesn’t necessarily interact with our models and it can just send a response with a specific handlebars view.</p>
+</div>
+<div class="paragraph">
+<p>And finally, the response is sent to the client.</p>
+</div>
+<div class="paragraph">
+<p>Within our project, then JavaScript code that is pertinent to interacting with models is placed in the <code>/models</code> folder; code that is the core business logic, is placed in the <code>/routes</code> folder; and our views are placed in the <code>/views</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>The finished folder structure looks like this :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">.
+├── app.js <i class="conum" data-value="1"></i><b>(1)</b>
+├── config <i class="conum" data-value="2"></i><b>(2)</b>
+│   ├── db.js
+│   ├── db.seed.js
+│   ├── sitemap-list-of-urls.txt
+│   └── sitemap.xml
+├── models <i class="conum" data-value="3"></i><b>(3)</b>
+│   ├── news_article.js
+│   ├── residence.js
+│   ├── review.js
+│   └── user.js
+├── package.json
+├── public <i class="conum" data-value="4"></i><b>(4)</b>
+│   ├── images
+│   ├── javascripts
+│   │   ├── fuse
+│   │   │   └── fuse.min.js
+│   │   ├── images
+│   │   │   ├── search.png
+│   │   │   └── search_input.png
+│   │   ├── leaflet
+│   │   │   └── leaflet.min.js
+│   │   ├── leaflet-fusesearch
+│   │   │   ├── leaflet.fusesearch.css
+│   │   │   └── leaflet.fusesearch.js
+│   │   └── leaflet-markercluster
+│   │       └── leaflet.markercluster.js
+│   ├── sitemap.xml.gz
+│   └── stylesheets
+│       └── style.css
+├── routes <i class="conum" data-value="5"></i><b>(5)</b>
+│   ├── dashboard.js
+│   ├── index.js
+│   ├── residences.js
+│   └── users.js
+└── views <i class="conum" data-value="6"></i><b>(6)</b>
+│   ├── dashboard
+│   ├── residences
+│   ├── static
+│   ├── users
+│   ├── error.hbs
+│   ├── index.hbs
+│   └── layout.hbs</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>app.js</code> starts the entire application</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>folder in which all of the configurations go. In this case, I only have the database configuration file, the database seed file, and 2 files which are related to the generation of sitemap</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>folder in which all of the models reside</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>folder contains assets that I want my app to use during production. I further separated by creating an <code>images</code>, <code>javascript</code>, and <code>stylesheets</code> folders in order to create separate places to place similar format files.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>folder contains the router handler logic for specific sections of the app</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>folder contains the user interface screens for the application</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_templates"><a class="anchor" href="#_templates"></a>Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Project Elderoost uses <a href="https://handlebarsjs.com/">handlebars</a> (hbs) templating language for displaying its HTML content. Handlebars is super easy to learn and get a hang off. It is one of the choices among several for the express viewing engine. I wont focus on the specifics and leave that up to you for some play. However, I believe that by going through the book and looking at the sample code you will be able to get the gist of the language without needing to look elsewhere.</p>
+</div>
+<div class="paragraph">
+<p>The way that the templates work is that there is a generic <code>layout.hbs</code> file which handles the overall template for your application. This is where you would insert your <code>html</code>, <code>css</code>, or <code>javascript</code> import script statements. The actual, default, location for views that will be displayed using this <code>layout.hbs</code> is located in the <code>views</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>The templates themselves are written in the handlebars templating language which is basically a superset of HTML. Each template file ends in <code>.hbs</code> file extension. For example, <code>views/index.hbs</code> is the main screen for the project.</p>
+</div>
+<div class="paragraph">
+<p>The main take away for the hbs templating language is that it uses curly braces <code>{{ somevariable }}</code> to evaluate javascript in its code. For example, suppose the following function is supposed to render a residence template and I set a variable that will be accessible in a template. To do this, simply pass on your variable as an object to the <code>res.render</code> function, like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">route.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">async function (req,res,next) {
+  const id = req.id;
+  const residence = await Residence.findOne({where: {id: `id`}}); <i class="conum" data-value="1"></i><b>(1)</b>
+  const data = { residence: residence };
+
+  res.render('residence', data);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>I assume that the residence object in the code above has address property that tells you where the residence is located.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then, in your <code>residence.hbs</code> template file, you would simply catch the javascript object and unwrap its value to be used however you want. For example, suppose we just want to catch the variable and print the residence’s address property. I would do it like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">residence.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;p&gt; Residence is located at {{residence.address}} &lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the code above would generate HTML output with the value that is set on our residence object’s address property. Simple!</p>
+</div>
+<div class="paragraph">
+<p>The other two useful demonstrations of the templating language would be : (1) conditionals and (2) loops. <a href="https://handlebarsjs.com/guide/builtin-helpers.html">Conditionals</a> only execute the code if the variable in the expression is available to the template and are executed like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">residence.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#if residence}}
+&lt;p&gt; Residence is located at {{residence.address}} &lt;/p&gt;
+{{/endif}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When working with loops, when you have a collection of data, the syntax is a bit different and looks like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">residence.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#each residences as |residence|}}
+&lt;p&gt; Residence is located at {{address}} &lt;/p&gt;
+{{/each}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The difference lies in the fact that you don’t need to prepend <em>residence</em> object to the evaluating expression. Simply pass in the appropriate property that you want displayed.</p>
+</div>
+<div class="paragraph">
+<p>The last thing that I want to cover is the two types of templates that typically exist in a project. Dynamic There are two types of templates in the project : (1) static content that rarely changes, and (2) dynamic content that gets generated per request.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="layout-hbs"><a class="anchor" href="#layout-hbs"></a>views/layout.hbs</h3>
+<div class="paragraph">
+<p>In addition to the <a href="seo.html#layout-head" class="page">head</a> code that I insert into my layout, I also add the following main navigation section that looks different depending on the type of the user and whether or not the user is logged in. It looks something like this:</p>
+</div>
+<div id="layout-navigation" class="listingblock">
+<div class="title">views/layout.hbs navigation bar code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;body&gt;
+  &lt;header class="header"&gt;
+    &lt;nav class="navbar"&gt;
+      &lt;div class="navbar__branding"&gt;
+        &lt;span class="navbar__branding__title"&gt;&lt;a href="/?ref=navbar" class="navbar__branding__title__action"&gt;ELDEROOST&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;ul class="navbar__actions"&gt;
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/residences?ref=nav" class="navbar__actions__list__item"&gt;Explore&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/about?ref=nav" class="navbar__actions__list__item"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/search?ref=nav" class="navbar__actions__list__item"&gt;Search&lt;/a&gt;
+        &lt;/li&gt;
+        {{#if user}} <i class="conum" data-value="1"></i><b>(1)</b>
+        {{#if user.is_admin}} <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/dashboard?ref=nav" class="navbar__actions__list__item"&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        {{/if}}
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/users/profile?ref=nav" class="navbar__actions__list__item"&gt;Profile&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="navbar__actions__list"&gt;&lt;a href="/users/logout?ref=nav" class="navbar__actions__list__item"&gt;Logout&lt;/a&gt;
+        &lt;/li&gt;
+        {{else}} <i class="conum" data-value="3"></i><b>(3)</b>
+        &lt;li&gt;&lt;a href="/users/signin?ref=nav" class="button reversed-is-primary navbar__actions__list__item-remove-underline" rel="nofollow" aria-label="Login to Elderoost" title="Login to Elderoost"&gt;Login&lt;/a&gt;
+        &lt;/li&gt;
+        {{/if}}
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  {{{body}}} <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>If a user is logged in they get option to view their profile and to logout</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If a user is admin, they also get link to Dashboard</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Otherwise, a guest user only sees Login link (in addition to Explore, About, and Search)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The content of each template will be inserted into here by the templating engine</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>What follows after the header, navigation, and body is simply the footer content for the template :</p>
+</div>
+<div id="layout-footer" class="listingblock">
+<div class="title">views/layout.hbs footer template code left section</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">  &lt;footer class="footer"&gt;
+    &lt;div class="footer__interactions"&gt;
+      &lt;ul class="footer__actions"&gt;
+        {{#if user}} <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;li&gt;&lt;a href="/users/logout?ref=footer" class="footer__actions__action" aria-label="Logout from Elderoost" title="Logout from Elderoost"&gt;Logout&lt;/a&gt;
+        &lt;/li&gt;
+        {{else}} <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;li&gt;&lt;a href="/users/signin?ref=footer" class="footer__actions__action" aria-label="Login to Elderoost" title="Login to Elderoost"&gt;Login&lt;/a&gt;
+        &lt;/li&gt;
+        {{/if}}
+        &lt;li&gt;&lt;a href="/about?ref=footer" class="footer__actions__action" aria-label="What is Elderoost?" title="What is Elderoost?"&gt;What is Elderoost?&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="/privacy?ref=footer" class="footer__actions__action" aria-label="Privacy Policy" title="Privacy Policy"&gt;Privacy Policy&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="/tos?ref=footer" class="footer__actions__action" aria-label="Terms of Use" title="Terms of Use"&gt;Terms of Use&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>If user is logged in, show logout function</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Else, if a guest user then show login function</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">views/layout.hbs footer template code center social icons</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">    &lt;div class="footer__interactions-secondary"&gt;
+      &lt;div&gt;&lt;span class="navbar__branding__title"&gt;ELDEROOST&lt;/span&gt;&lt;small&gt;© 2017-2020&lt;/small&gt;&lt;/div&gt;
+      &lt;div&gt;
+        &lt;ul class="footer__interactions-secondary__social"&gt;
+          &lt;li class="footer__interactions-secondary__social__list"&gt;&lt;a href="https://twitter.com/Elderoost" class="footer__interactions-secondary__social__list__action" target="_blank" aria-label="Follow us on Twitter" title="Follow us on Twitter"&gt;&lt;i class="fa fa-twitter-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/li&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+          &lt;li class="footer__interactions-secondary__social__list"&gt;&lt;a href="https://instagram.com/Elderoost" class="footer__interactions-secondary__social__list__action" target="_blank" aria-label="Follow us on Instagram" title="Follow us on Instagram"&gt;&lt;i class="fa fa-instagram" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/li&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+          &lt;li&gt;&lt;a href="https://www.facebook.com/Elderoost" class="footer__interactions-secondary__social__list__action" target="_blank" aria-label="Follow us on Facebook" title="Follow us on Facebook"&gt;&lt;i class="fa fa-facebook-square" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/li&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+        &lt;/ul&gt;
+      &lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Twitter</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Instagram</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Facebook</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">views/layout.hbs footer template code right studio link</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">      &lt;div&gt;
+        &lt;small&gt;Another &lt;a href="https://getaclue.me" class="footer__interactions-secondary__social__list__action" title="Go to Alex Kluew"&gt;&lt;strong&gt;getaclue&lt;/strong&gt;&lt;/a&gt; Production&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Download completed <code>views/layout.hbs</code> code</div>
+<div class="paragraph">
+<p>Looking for <code>views/layout.hbs</code> completed code? Download complementary <code>views/layout.hbs</code> code <a href="https://bit.ly/2VlBOvZ">here</a>.</p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="index-hbs"><a class="anchor" href="#index-hbs"></a>views/index.hbs</h3>
+<div class="paragraph">
+<p>For this file we first begin by loading the dependencies to constructing our leaflet map. In our project it is a combination of provided library code and external calls. Feel free to modify this code as you wish just ensure the library versions are the same. I noticed at one point that some libraries do not jive well if some libraries are running on the latest everything. I recommend using the libraries provided with this book. The code looks like :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs beginning code piece</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" /&gt;
+&lt;script src="/javascripts/leaflet/leaflet.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" crossorigin="" /&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+  crossorigin="" /&gt;
+&lt;script src="/javascripts/leaflet-markercluster/leaflet.markercluster.js" crossorigin=""&gt;&lt;/script&gt;
+&lt;script src="/javascripts/fuse/fuse.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="/javascripts/leaflet-fusesearch/leaflet.fusesearch.css" /&gt;
+&lt;script src="/javascripts/leaflet-fusesearch/leaflet.fusesearch.js" crossorigin=""&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I would copy paste the code at this point as we will look at these modules in greater detail at different points of this book. What follows next is a conditional code block that displayes latest residence updates, if there are any to display. When is a case that there is nothing to display? If you are using a custom query or if it is a brand new project =) Otherwise, it is just a precaution and the code looks like this :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs code continuation</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper" style="padding-bottom:0"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;
+      Explore senior care residences near you
+    &lt;/h1&gt;
+  &lt;/div&gt;
+  {{#if residences}}
+  &lt;div class="main__wrapper main__negative-top-margin" style="max-width:964px;border:1px solid #344e86;"&gt;
+    &lt;div class="padding-left padding-right"&gt;
+      &lt;h3 style="display:flex;align-items:center;"&gt;&lt;i class="fas fa-address-card fa__mod"
+          aria-hidden="true"&gt;&lt;/i&gt;&amp;nbsp;Recently updated residences&lt;/h3&gt;
+      &lt;ul class="main__wrapper__list"&gt;
+        {{#each residences as |residence|}}
+        &lt;li class="main__wrapper__list__item"&gt;&lt;a class="main__wrapper__link"
+            href="/residences/{{slug}}?ref=recently_updated"&gt;{{name}}&lt;/a&gt;&lt;br&gt;&lt;em&gt;{{address_city}},
+            {{address_state}}&lt;/em&gt;
+        &lt;/li&gt;
+        {{/each}}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  {{/if}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that code, we begin the custom map construction of the area and the side button controls that take you quickly to a specific province</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs map construction beginning</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="main__wrapper-main-map" style="border-radius:5px;max-width:964px;border:1px solid #344e86;"&gt;
+  &lt;div class="padding-left padding-right"&gt;
+    &lt;p class="main__text-small"&gt;&lt;i class="fa fa-info-circle" aria-hidden="true"&gt;&lt;/i&gt; Drag around the map to find
+      elderly care residences in your region.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper-main-map-with-filter"&gt;
+    &lt;div class="main__wrapper-main-map-with-filter__wrapper"&gt;
+      &lt;small&gt;&lt;strong&gt;Filter by Province&lt;/strong&gt;&lt;/small&gt;
+      &lt;ul class="main__wrapper__list-filter"&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button"type="button" name="jump-to-BC"&gt;BC&lt;/button&gt;&lt;/li&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-AB"&gt;AB&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-SK"&gt;SK&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-MB"&gt;MB&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-ON"&gt;ON&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-QC"&gt;QC&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-NB"&gt;NB&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-PEI"&gt;PEI&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-NS"&gt;NS&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="main__wrapper__list__item-filter"&gt;&lt;button class="main__wrapper__list__item-filter__button" type="button" name="jump-to-NL"&gt;NL&lt;/button&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Province short code button to jump on the map on press</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then we procede to construct the map itself</p>
+</div>
+<div id="index-hbs-map" class="listingblock">
+<div class="title">views/index.hbs map construction</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div id="map" class="map main__wrapper-main-map-with-filter" style="width:100%;"&gt;
+  &lt;script type="text/javascript"&gt;
+  !function(e){L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",{attribution:`&amp;copy; &lt;a href="http://osm.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors, &amp;copy; &lt;a
+      href="https://carto.com/attribution" &gt; CARTO&lt;/a&gt; `}).addTo(e),document.addEventListener("DOMContentLoaded",function(){try{let a=fetch('/residences/api').then(result=&gt;result.json()).then(data=&gt;{ <i class="conum" data-value="1"></i><b>(1)</b>
+        const t=L.geoJSON(data,{pointToLayer:function(e,t){return L.marker(t)},onEachFeature:function(e,t){e.layer=t;t.bindPopup("&lt;div&gt;&lt;h3&gt;"+e.properties.name+"&lt;/h3&gt;&lt;span&gt;"+`&lt;i class="fa fa-map-marker fa__mod" aria-hidden="true"&gt;&lt;/i&gt;&amp;nbsp;`+e.properties.address+'&lt;/span&gt;&lt;br&gt;&lt;a href="/residences/'+e.properties.slug+'?ref=home_map_popup"&gt;View details&lt;/a&gt;&lt;/div&gt;') <i class="conum" data-value="2"></i><b>(2)</b>
+      }});var n=L.markerClusterGroup({chunkedLoading:!0,showCoverageOnHover:!1});n.addLayer(t);e.addLayer(n);const i={_map:e,position:"topleft",title:"Search",panelTitle:"",placeholder:"Search",caseSensitive:!1,threshold:.5,maxResultLength:null,showResultFct:null,showInvisibleFeatures:!0};var o=L.control.fuseSearch(i);o.indexFeatures(data,["name","address"]);<i class="conum" data-value="3"></i><b>(3)</b>
+      e.addControl(o)});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>API</code> end point for our <a href="maps.html#geoJSON" class="page">geoJSON</a> <a href="maps.html#geoJSON-data" class="page">data</a> we request during map construction</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Popup on each marker that gives you a link to the specific residence based on their slug</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Index fuse search plugin using <code>name</code> and <code>address</code> properties of each residence</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs map controls for prinvinces on click binding construction</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">document.getElementsByName("jump-to-QC")[0].addEventListener("click",function(){e.setView([45.593,-73.504],7)}),document.getElementsByName("jump-to-ON")[0].addEventListener("click",function(){e.setView([43.606,-79.843],7)}),document.getElementsByName("jump-to-NB")[0].addEventListener("click",function(){e.setView([46.61,-65.945],7)}),document.getElementsByName("jump-to-NS")[0].addEventListener("click",function(){e.setView([45.056,-63.397],7)}),document.getElementsByName("jump-to-PEI")[0].addEventListener("click",function(){e.setView([46.288,-63.419],7)}),document.getElementsByName("jump-to-NL")[0].addEventListener("click",function(){e.setView([47.475,-52.85],6)}),document.getElementsByName("jump-to-MB")[0].addEventListener("click",function(){e.setView([51.382,-98.811],7)}),document.getElementsByName("jump-to-SK")[0].addEventListener("click",function(){e.setView([51.669,-106.622],7)}),document.getElementsByName("jump-to-AB")[0].addEventListener("click",function(){e.setView([53.55,-113.994],6)}),document.getElementsByName("jump-to-BC")[0].addEventListener("click",function(){e.setView([53.403,-126.387],5)<i class="conum" data-value="1"></i><b>(1)</b>
+})}catch(t){let n=L.marker([43.6426,-79.3871]).addTo(e);e.setView([43.6426,-79.3871],13),n.bindPopup(`Oops, looks like we had a problem loading the map
+=(&lt;br&gt;&lt;strong&gt;But,do not worry!&lt;/strong&gt;&lt;br&gt;You can still &lt;a href="/search?ref=home_map_popup_failed" class="main__wrapper__link"&gt;Search&lt;/a&gt; or &lt;a href="/search?ref=home_map_popup_failed" class="main__wrapper__link"&gt;Switch to list view&lt;/a&gt;.`).openPopup() console.error(`error : `,t)}})}(L.map("map",{scrollWheelZoom:!1}).setView([45.416191,-75.691727],5))&lt;/script&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In the code above we bind on click events that activate the buttons for each province click. <code>e</code> is the identifier for our map; <code>setView</code> is the function that changes where the map will be changed its view to based on input of <code>[53.55,-113.994],6</code> or an array and a number. Whenever a user clicks on the province short code, the map changes the location based on the coordinates provided above. Thus, this code show you how to interact with a map using external html elements like a button.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We finish off the template with a link to our residences in a list manner, in a table view; like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs finishing code with a link to table list view</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">    &lt;/div&gt;
+    &lt;div style="display:flex; align-items:center; padding:1em;"&gt;
+      &lt;h3 style="padding-right:1em;"&gt;Not a fan of maps? &lt;i class="fa fa-arrow-circle-right" aria-hidden="true"
+          style="padding-left:0.5em"&gt;&lt;/i&gt;&lt;/h3&gt;
+      &lt;a href="/residences?ref=main_page" style="flex-grow:1" class="button
+      is-primary button__wrapper__a-remove-underline"&gt;View directory&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper-main-map padding-left padding-right"
+    style="flex-direction: row; justify-content: space-around; align-items: center; margin-bottom:0;"&gt;
+    &lt;h2&gt;Are we missing a residence?&lt;/h2&gt;
+    &lt;a href="/residences/suggest-new?ref=main-page" class="button button__wrapper__a-remove-underline"
+      aria-label="Add a missing residence" title="Add a Residence"&gt;Suggest a missing residence&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Download completed <code>views/index.hbs</code> code</div>
+<div class="paragraph">
+<p>Looking for completed <code>views/index.hbs</code> code? Download complementary <code>views/index.hbs</code> code  <a href="https://bit.ly/2zbtd6h">here</a>.</p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cascading_style_sheet"><a class="anchor" href="#_cascading_style_sheet"></a>Cascading style sheet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Project Elderoost was designed with <a href="https://webaim.org/resources/contrastchecker/">WCAG 2.0 AAA</a> color palette in mind. If you have suggestions or improvements, feel free to reach out and contact me.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Download custom css</div>
+<div class="paragraph">
+<p>Feel free to download the custom <strong>css</strong> file and use this custom style sheet located <a href="https://bit.ly/34SaDw4">here</a> in your project.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/style-sheet-screen.png" alt="gist.github.com link to custom Elderoost css">
+</div>
+<div class="title">Figure 4. Download free Elderoost custom style sheet on private gist.github.com link.</div>
+</div>
+<div class="paragraph">
+<p>I used Block, Element, Modifier (BEM) css style convention for my naming of css variables. You can read more about BEM <a href="https://css-tricks.com/bem-101/">here</a>. For some backgrounds I used <a href="http://www.heropatterns.com/">hero patterns</a>.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="forms"><a class="anchor" href="#forms"></a>Forms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am going to assume for the duration of the project that you are aware about one of the most common security flaws for a website : cross site request forgery (csrf).<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> In order to mitigate this attack, we are going to use the <code>csurf</code> node.js module. We first add it in our <code>routes/users.js</code> file like so</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const csrf = require('csurf'); <i class="conum" data-value="1"></i><b>(1)</b>
+const csrfProtection = csrf({ cookie: true }); <i class="conum" data-value="2"></i><b>(2)</b>
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>import the csurf module</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>set the token mechanism to be initialized and to be ready to be passed along via cookies</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then, we simply focus on how to use it. We need to use the <code>csrfProtection</code> function in our routers as needed.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>case one:</p>
+<div class="paragraph">
+<p>for <code>get</code> router handlers, by adding <code>csrfProtection</code> function handler gives the request object <code>csrfToken()</code> function that passes on a csrf token to be used by a form.</p>
+</div>
+</li>
+<li>
+<p>case two:</p>
+<div class="paragraph">
+<p>for <code>post</code> router handlers, <code>csrfProtection</code> function ensures that the csrf token matches from the form data. If the token does not match, then the router handler throws an error and everything stops.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Case one : <code>get</code> router in routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.get('/signin', csrfProtection, (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  res.render('users/sign-in', {
+    title: `Login - Elderoost`,
+    csrfToken: req.csrfToken(), <i class="conum" data-value="2"></i><b>(2)</b>
+  });
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Attach <code>csrfProtection</code> to the <code>/signin</code> <code>get</code> route</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Pass <code>csrfToken</code> variable to the <code>views/users/sign-in.hbs</code> template to be used as a hidden input in a form</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Case two : <code>post</code> router in routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.post('/signin', csrfProtection, async (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  const { email, password } = req.body;
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>By attaching <code>csrfProtection</code> route handler, this router handler now expects a csrf token to be passed along with other information</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Moving forward I will assume that you will understand where the csrf token is coming from in various sections of the application.</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. see <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" class="bare">https://en.wikipedia.org/wiki/Cross-site_request_forgery</a> or <a href="https://owasp.org/www-community/attacks/csrf" class="bare">https://owasp.org/www-community/attacks/csrf</a>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

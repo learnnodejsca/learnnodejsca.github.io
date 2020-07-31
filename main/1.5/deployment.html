@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deployment :: Learn Node.js by Alex Kluew</title>
+    <link rel="canonical" href="https://course.learnnodejs.dev/main/1.5/deployment.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173618647-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-173618647-1')</script>
+  </head>
+  <body class="article">
+<script async data-uid="b7a10c8563" src="https://wondrous-experimenter-4427.ck.page/b7a10c8563/index.js"></script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://course.learnnodejs.dev">Learn Node.js by Alex Kluew</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://gumroad.com/l/javascript" target="_blank">Buy on Gumroad</a>
+        <a class="navbar-item" href="https://leanpub.com/learnnodejs" target="_blank">Buy on LeanPub</a>
+        <a class="navbar-item" href="https://twitter.com/alexkluew_dev">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512">
+              <path fill="#57aaee"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="main" data-version="1.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Learn Node.js</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Learn Node.js</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sequelize.js.html">Sequelize.js</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="seo.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maps.html">Maps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="deployment.html">Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Learn Node.js</span>
+    <span class="version">1.5</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Learn Node.js</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li>Learn Node.js</li>
+    <li><a href="deployment.html">Deployment</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/learnnodejsca/learnnodejs/edit/master/main/modules/ROOT/pages/deployment.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Deployment</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you are happy with your project and how it behaves on your local environment, you are probably looking for a way to share your project with the public. In this chapter, I will be going over the various tools and procedures that are available to you. However, I will focus on deploying our project to the <a href="https://heroku.com">heroku</a> platform.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">development </dt>
+<dd>
+<p>synonymous with application being worked on state; usually not used by the public and worked on locally</p>
+</dd>
+<dt class="hdlist1">production </dt>
+<dd>
+<p>synonymous with application being in the state that is being served to public and used by customers</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The deployment also depends on each project and the access to funds available. There are free solutions available that are perfect for small projects. However, once you start working with real projects, cost will have to play a factor in deciding how to deploy your application to production stage. Moreover, the cost and skills required to run the infastructure should also play a role.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ngrok_com"><a class="anchor" href="#_ngrok_com"></a>ngrok.com</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You know how you cannot just easily share your <code><a href="http://localhost:3000" class="bare">http://localhost:3000</a></code> project link with someone? You need to play with your system settings or your router setup. It can be a hassle and time consuming; and this is where ngrok shines.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/localhost-ngrok-client.png" alt="localhost ngrok client">
+</div>
+<div class="title">Figure 1. Ngrok acts like a middleman between your local code and whoever you share the link with</div>
+</div>
+<div class="paragraph">
+<p>Ngrok is a wonderful step before production deployment. What ngrok allows you to do is to create a sharerable link that proxies to your local environment. All you have to do is register for the tool and pick the plan that you want to use. I recommend the free tier for testing purposes.</p>
+</div>
+<div class="paragraph">
+<p>Then you download their command line interface tool, as described on their website, and just run it. Once you are ready to share a working application, start the server on <code>localhost</code> and remember the <code>port</code>. When everything is running, run ngrok tool over the port that the application is running. That is all. Ngrok will do all of its magic for you and give you a link to share with your users or clients.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_heroku"><a class="anchor" href="#_heroku"></a>Heroku</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deploying your project to heroku is one of the fastest and easiest solutions available out there. Heroku empowers you and enables you to focus on just your project. Why is that a big deal? Before running our node.js project, a server needs to be provisioned and setup. This takes time and resources. Only after the server and the environment is setup, then you can create some deployment procedure.</p>
+</div>
+<div class="paragraph">
+<p>Whereas, in heroku all you have to do is deploy and the platform focuses on the server part. This is obviously a trade off. Heroku has done a lot of work in the background to make this as easy as possible for end users and timely. For this, they charge a fee and this is how they make their money.</p>
+</div>
+<div class="paragraph">
+<p>While your project is small, and while you scale, heroku is a viable resource and a timesaver. But, I should mention that sooner or later you will need to look at server skills or hiring someone. Why? Cost. As your project scales on heroku, you will need more resources to make everything run smoothly. At one point you will notice that some things could be done cheaper, if the knowledge is there. So it is a trade off.</p>
+</div>
+<div class="paragraph">
+<p>Heroku not only shines at its ease and time saving, but also in integrating with many add-ons and platforms. They make adding beautiful logging service, a database, or a mailer (among many other things) with a click of a button and some ready-to-paste code. They really made their platform wonderful and hard to switch away from.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Git</div>
+<div class="paragraph">
+<p>Heroku and their tools require that git is installed on your system before fully working. If this is a problem then heroku may not be a suitable solution. However, I recommend that you spend some time learning git and, ultimately, github. Don&#8217;t be afraid to just give it a shot. You only need basic knowledge in order for everything to run.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>So in order to deploy our project on heroku, you need to set everything up locally. You can read about the setup process on heroku&#8217;s website located here : <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="bare">https://devcenter.heroku.com/articles/getting-started-with-nodejs</a> Just substitude our project for the example code provided in the tutorial and everything should work. After running through the setup, our project was uploaded to heroku, heroku processed it, and finally it ran <code>node app.js</code>; which started our application.</p>
+</div>
+<div class="paragraph">
+<p>The next time you want do adjust your code and see it reflected you will only have to add your project to a latest git commit and type <code>git push heroku master</code>. Everything else will just work.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/git-heroku-process.png" alt="git heroku process">
+</div>
+<div class="title">Figure 2. Coding with git and heroku overview</div>
+</div>
+<div class="paragraph">
+<p>However, nowhere in the chapter so far have we properly finished configuring our production setup. We got our code to be deployed to heroku. Heroku ran our code. But, where is our PostgreSQL database for example? Our application cannot work without a database.</p>
+</div>
+<div class="paragraph">
+<p>This is where heroku shines. Open your browser, head over to heroku, login, and find your project. Once you click on your project, heroku will bring you to your project&#8217;s dashboard. In the dashboard, look for an addons section and click <code>Configure Add-ons</code></p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/heroku-dashboard.png" alt="Configure add-ons feature on heroku project&#8217;s dashboard">
+</div>
+<div class="title">Figure 3. Configure add-ons feature on heroku project&#8217;s dashboard</div>
+</div>
+<div class="paragraph">
+<p>Then, from the addons you will need to find the following two addons :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Heroku Postgres</p>
+</li>
+<li>
+<p>Papertrail</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These two add-ons are the minimum that I recommend for a project. Postgres is, hopefully, self-explanatory in that it adds postgreSQL to your project. Moreover, heroku sets up an environmental variable called <code>DATABASE_URL</code> with the value to connect to this newly provisioned database.</p>
+</div>
+<div class="paragraph">
+<p>If you recall during our <a href="sequelize.js.html#database-setup" class="page">database setup</a>, we had an if statement that looked like this :</p>
+</div>
+<div class="listingblock">
+<div class="title">config/db.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">if (process.env.NODE_ENV === 'production') {
+  database = `${process.env.DATABASE_URL}`;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hopefully you can now understand why I specifically put this code in there.</p>
+</div>
+<div class="paragraph">
+<p>Meanwhile, I recommend to install the optional <code>Papertrail</code> plugin. It is a wonderful plugin to look at your errors while you develop. You can see everything that your main node.js process sees using this tool. For more robust logging tool, I would recommend something like <code>Rollbar</code>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, as I mentioned in the introduction to heroku, the platform has a very generous free tier. Then you can pay additional fees as you scale and the need for resources grows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_server"><a class="anchor" href="#_server"></a>Server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most popular way to deploy applications is by the use of your own server. The biggest downside, if you consider it a down side of course, is that you have to do everything yourself or outsource that to someone. On the whole, there is a steep learning curve to server configuration and setup. However, the process is replicated once you learn it. If the knowledge is not necessary I still think this section is beneficial to read as I give a general overview.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Don&#8217;t forget about back-up services and redundancies. Once you begin growing, considering having at least three copies of a resource. Good rule of thumbs to have.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For deploying of your server there are several solutions :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Colocation</p>
+</li>
+<li>
+<p>In the cloud</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_colocation"><a class="anchor" href="#_colocation"></a>Colocation</h3>
+<div class="paragraph">
+<p>Colocation&#8201;&#8212;&#8201;you rent physical space and put your physical server in a building that is usually called a data center. This space may be local or you may have to travel to it. Depending on your resources available. However, you would want your server to have good resources such that you can serve your customers as fast as possible.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes these data centers have specific hardware that they sell, other times you may be required to build and bring the computer yourself.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cloud"><a class="anchor" href="#_cloud"></a>Cloud</h3>
+<div class="paragraph">
+<p>In the cloud, or in other words, renting your server resources from someone who is selling their hardware. This is usually, once again, done by the data providers like Linode and major software companies like Amazon Web Services, Google Cloud, Microsoft Azure. The only difference is the type of data center that it is. Otherwise, some data centers allow for both renting of physical hardware and of virtually allocated hardware.</p>
+</div>
+<div class="paragraph">
+<p>This is the most common solution. People rent virtually allocated machines and then set them up as they need them.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Remember, the more control you have about your infastructure the more risk you take for the running of the application(s). Think about redundancies and back-ups.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_server"><a class="anchor" href="#_running_server"></a>Running Server</h3>
+<div class="paragraph">
+<p>Once you get everything running on a server, you will move into the maintenance phase of this current project. There will be a need to know when the application crashes or if the server goes down for some reason. It is probably a good idea for your server to use some 3rd party health check tool. You will want to be on top of your crashes so that your users experience the minimum amount of down time.</p>
+</div>
+<div class="paragraph">
+<p>I would argue that you should have a health check for each of the major components of your application. In our case, that is the express server and the postgresql database. In production, I would want to know the health state for both of these components. This means additional code that needs to be built.</p>
+</div>
+<div class="paragraph">
+<p>Then you should think about back-ups and the frequency of these back-ups. In our case, the only data that we have that is important is located inside the PostgreSQL database. Fortunately for  us, PostgreSQL has a tool that allows for an export and import of data. So, I would run and export a copy of our data at least once a day. Usually, I use a time stamp for the filenames just for future readibility.</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t forget to have at least several copies of your daily backups. I recommend at least three copies of the data located in three different places: (1) hard drive, (2) external hard drive, and (3) cloud.</p>
+</div>
+<div class="paragraph">
+<p>In addition you would want to use some kind of third party service for your error notifications. When picking on a provider, I would look at the different notification mechanisms that they have in place. Some of them even notify you when an error occurs via sms.</p>
+</div>
+<div class="sect3">
+<h4 id="_healthcheck_of_server"><a class="anchor" href="#_healthcheck_of_server"></a>Healthcheck of Server</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Healthcheck is a feature in your application that allows  you to monitor the state of your application while you are away by some 3rd party service (or a service of your own placed in a different location).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We would like to have a route on our project that has only one function : to respond to requests with a message that says I am online and everything is working. Usually it goes something like this :</p>
+</div>
+<div class="listingblock">
+<div class="title">.app.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+app.use(`/status`, (req, res, next) =&gt; {
+  res.status(200).send({ status: `OK` }); <i class="conum" data-value="1"></i><b>(1)</b>
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The actual response varies according to the 3rd party service that you use</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The 3rd party service calls on this route on a regular basis. The function of the 3rd party service is to notify you in an event that the server does not respond with a proper message. Then the service would send you some kind of notification to say that your service did not respond in an expected manner.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_healthcheck_of_databases"><a class="anchor" href="#_healthcheck_of_databases"></a>Healthcheck of Databases</h4>
+<div class="paragraph">
+<p>Similarly to the server, you would like to know that your database (PostgreSQL in our instance) is working properly. Luckily, we can do that with the <code>authenticate</code> function that is provided to us with sequelize module. Our database healthcheck would look something like this</p>
+</div>
+<div class="listingblock">
+<div class="title">.app.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+app.use(`/status/database`, (req, res, next) =&gt; {
+  sequelize
+    .authenticate()
+    .then(() =&gt; {
+      res.status(200).send({ status: `OK` }); <i class="conum" data-value="1"></i><b>(1)</b>
+    })
+    .catch((err) =&gt; {
+      res.status(500).send({ status: `NOT OK` });
+    });
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The actual response varies according to the 3rd party service that you use</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_server_setup_checklist"><a class="anchor" href="#_server_setup_checklist"></a>Server setup checklist</h3>
+<div class="paragraph">
+<p>Basic checklist to get our node.js application running on a server.</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Buy server</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Pick Ubuntu distro</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup ssh</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup ssh login over ssh-key and not via password</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Create an <code>admin</code> user</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Remove remote <code>root</code> access</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup Node.js environment as per <a href="https://nodejs.org/en/" class="bare">https://nodejs.org/en/</a></p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup PostgreSQL</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Create cron job to backup database daily</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Create local cron job to download these backups</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup Nginx</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup HTTPS / SSL</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup <code>systemd</code> to run Node.js project</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup Cloudflare</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Setup Health Status Route</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Find a way to sync local project and server (git works or rsync)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

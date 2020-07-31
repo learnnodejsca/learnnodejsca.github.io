@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Users :: Learn Node.js by Alex Kluew</title>
+    <link rel="canonical" href="https://course.learnnodejs.dev/main/1.5/users.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173618647-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-173618647-1')</script>
+  </head>
+  <body class="article">
+<script async data-uid="b7a10c8563" src="https://wondrous-experimenter-4427.ck.page/b7a10c8563/index.js"></script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://course.learnnodejs.dev">Learn Node.js by Alex Kluew</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://gumroad.com/l/javascript" target="_blank">Buy on Gumroad</a>
+        <a class="navbar-item" href="https://leanpub.com/learnnodejs" target="_blank">Buy on LeanPub</a>
+        <a class="navbar-item" href="https://twitter.com/alexkluew_dev">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512">
+              <path fill="#57aaee"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="main" data-version="1.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Learn Node.js</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Learn Node.js</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sequelize.js.html">Sequelize.js</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="seo.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maps.html">Maps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="deployment.html">Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Learn Node.js</span>
+    <span class="version">1.5</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Learn Node.js</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li>Learn Node.js</li>
+    <li><a href="users.html">Users</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/learnnodejsca/learnnodejs/edit/master/main/modules/ROOT/pages/users.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Users</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Secure user workflows are required in modern projects. In this chapter we are going to explore user logins, registration, security, and forgot password user flow designs, and implementation logic.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Before working on the actual code implementation of this section I had some requirements that I wanted to satisfy.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/user-usecases.png" alt="user usecases">
+</div>
+<div class="title">Figure 1. User use cases design</div>
+</div>
+<div class="paragraph">
+<p>First, I wanted at least 4 screens : login, create an account, forgot password, and profile page screens. Second, I wanted the passwords to be stored securely and not in plain text. Third, and finally, I wanted the reset my password user flow to send emails.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_user_sign_in"><a class="anchor" href="#_secure_user_sign_in"></a>Secure user sign-in</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I consulted OWASP for the following four wiki pages that gave me the necessary background refresher that I needed on passwords. The sources were :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html" class="bare">https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html" class="bare">https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html" class="bare">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="bare">https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</a></p>
+</li>
+<li>
+<p>and <a href="https://owasp.org/www-project-top-ten/" class="bare">https://owasp.org/www-project-top-ten/</a></p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/login-activity-screen.png" alt="Login user flow">
+</div>
+<div class="title">Figure 2. Login user flow design</div>
+</div>
+<div class="paragraph">
+<p>To get the login page, I wrote a simple router that passes on the page title and the csrf token to the template.</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">router.get('/signin', csrfProtection, (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+    res.render('users/sign-in', { <i class="conum" data-value="2"></i><b>(2)</b>
+      title: `Login - Elderoost`, <i class="conum" data-value="3"></i><b>(3)</b>
+      csrfToken: req.csrfToken() <i class="conum" data-value="4"></i><b>(4)</b>
+  });
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add csrf protection that adds <code>csrfToken()</code> function to <code>req</code> object</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Render <code>views/users/sign-in.hbs</code> template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set title for the template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Pass csrf token to be used in signin form</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, I needed to create the template so that a user could sign in. I know that in the template I wanted a user login using an email address and a password to sign in. Additionally, I wanted the UI to have a link to create a user account page and to the reset password page. I went ahead and created the form and the UI in the following block :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/sign-in.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;form action="/users/signin" method="POST"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;input type="hidden" name="_csrf" value="{{csrfToken}}"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;div class="field"&gt;
+    &lt;label class="label" for="email"&gt;Email&lt;/label&gt;
+    &lt;div class="input-wrapper"&gt;
+      &lt;input id="email" name="email" type="email" class="input" required spellcheck="false" autocomplete="off"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="field"&gt;
+    &lt;label class="label" for="password"&gt;Password&lt;/label&gt;
+    &lt;div class="input-wrapper"&gt;
+      &lt;input id="password" name="password" type="password" class="input" required spellcheck="false"
+        autocomplete="off"&gt;
+      &lt;p class="help"&gt;Forgot your password? &lt;a href="/users/forgot" class="main__wrapper__link"&gt;Reset password&lt;/a&gt;&lt;/p&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class="button is-primary full-width" type="submit"&gt;Login &lt;i class="fa fa-sign-in-alt"
+      aria-hidden="true"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Our form handler url</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This is the csrf token that we passed from the code block previously</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Link to our forgot password page</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Great! Our user can now visit our <code>/users/signin</code> route and see a functional login form that is csrf protected.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/login-screen.png" alt="Login screen">
+</div>
+<div class="title">Figure 3. Login Screen</div>
+</div>
+<div class="paragraph">
+<p>So, naturally, we need to now move on to the code that is responsible for processing this form. The following code works on the form and signs in a user into our application if the email and password match. Back I went into our <code>./routes/users.js</code> router and added a new route.</p>
+</div>
+<div class="paragraph">
+<p>I made sure that this next router is waiting for a <code>POST</code> on my <code>/users/signin</code> route. Before working on the code we need to install a few dependent libraries :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>bcrypt for comparing passwords in the database to the passed string</p>
+</li>
+<li>
+<p>and secure client-session library that will allow us to maintain a user sessions.</p>
+</li>
+</ol>
+</div>
+<div id="install-bcrypt" class="listingblock">
+<div class="title">Lets open up the terminal and install them</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install --save bcrypt
+npm install --save client-sessions</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now that our two dependencies are installed, lets work on the code to make it look like this :</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const bcrypt = require('bcrypt');
+const saltRounds = 12;
+...
+router.post('/signin', csrfProtection, async (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  const { email, password } = req.body;
+  if (email &amp;&amp; password) { <i class="conum" data-value="2"></i><b>(2)</b>
+    const user = await User.findOne({ where: { email: `${email}` } });
+    if (user) { <i class="conum" data-value="3"></i><b>(3)</b>
+      const compared = await bcrypt.compare(password, user.password);
+      if (compared) { <i class="conum" data-value="4"></i><b>(4)</b>
+        const _user = { <i class="conum" data-value="5"></i><b>(5)</b>
+          username: user.username,
+          email: user.email,
+          is_admin: user.is_admin
+        };
+        req.session.user = _user; <i class="conum" data-value="6"></i><b>(6)</b>
+        res.redirect('/users/profile');
+      } else {
+        res.redirect('/users/signin');
+      }
+    } else {
+      res.redirect('/users/signin');
+    }
+  } else {
+    res.redirect('/users/signin');
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Run csrf protection to ensure our tokens match</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Check if the user entered an email and a password</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Check if a user with such an email exists in our database</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Check if password equals what we have in our database using bcrypt</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Create a <code>User</code> object using user&#8217;s data</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Set the session data so the user can be remembered as logged in</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>First thing, like all of the other forms in the app, is the csrf protection that will be checked via the <code>csrfProtection</code> function. If it passes, then my code will be executed. In my code, I am expecting the <code>email</code> and <code>password</code> variables to be passed in the request. If either of these items is missing, then I send the user back to the main login page.</p>
+</div>
+<div class="paragraph">
+<p>From there, I asked sequelize to run a query in our postgresql database and find a user by their email. If the user exists, then great and we are ready to move on to the password comparison. Otherwise, redirect the user back to the main login page. If the user exists, we call <code>bcrypt.compare(password,hash)</code> function which returns a true or a false. If the password matches the email, then we create a new user object, <code>_user</code>, with their <code>username</code>, <code>email</code>, and <code>is_admin</code> variables set. I then attach this object to our session object, <code>req.session.user</code>, so that when the user returns after leaving, we could recognize them again in the future. After confirming the password and setting a new user session, I redirect the user to their profile page.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_secure_user_sessions"><a class="anchor" href="#_secure_user_sessions"></a>Secure user sessions</h3>
+<div class="paragraph">
+<p>The session cookie object is added on startup of the project using the <code>client-sessions</code> library.</p>
+</div>
+<div class="listingblock">
+<div class="title">app.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const sessions = require('client-sessions'); <i class="conum" data-value="1"></i><b>(1)</b>
+const SECRET = process.env.TOP_SECRET; <i class="conum" data-value="2"></i><b>(2)</b>
+...
+app.use(
+  sessions({
+    cookieName: 'session', <i class="conum" data-value="3"></i><b>(3)</b>
+    secret: SECRET, <i class="conum" data-value="4"></i><b>(4)</b>
+    duration: 24 * 60 * 60 * 1000,
+    activeDuration: 1000 * 60 * 5
+  })
+);
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Import the library</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Set a secret token to encrypt our session cookie data with</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set the cookie&#8217;s name; this string is also how you access this cookie in <code>req</code> object. For example, if cookieName is <code>myName</code> then the session cookie data would be accessed via <code>req.myName</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Encrypt the cookie using the secret token.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The code above allows you to access <code>req.session</code> object in your router handler. This means that whatever text you put in <code>cookieName: 'objectName'</code> is what will be available as <code>req.objectName</code> so pay attention to this area during setup.</p>
+</div>
+<div class="paragraph">
+<p>The following function is responsible for checking if a user is present on every call. This is done by using the client-sessions library check during the request and allows me to quickly set <code>req.user</code> object during this function.</p>
+</div>
+<div class="listingblock">
+<div class="title">app.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const sessionRequestHandler = async (req, res, next) =&gt; {
+  if (req.session &amp;&amp; req.session.user &amp;&amp; req.session.user.email) {
+    const user = await User.findOne({
+      where: { email: req.session.user.email },
+    });
+    if (user) {
+      const _user = {
+        username: user.username,
+        email: user.email,
+        is_admin: user.is_admin,
+      };
+      req.user = _user;
+      req.session.user = _user;
+      res.locals.user = req.session.user;
+    }
+  }
+  next();
+};
+app.use(sessionRequestHandler);
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code is inserted above before any other router handlers. The <code>sessionRequestHandler</code> checks on every request if a client is a known user or a guest visitor. If they are a returning user, then we adjust the session data and set the user variable to be accessible by our templates by setting the <code>req.locals.user</code> variable.</p>
+</div>
+<div class="paragraph">
+<p>This is the basics of authentication : finding the correct user based on some criteria, such as password and email in our case; then setting the session data for each request; and followed by checking the session data on returning requests to see if a user is who they say they are. This way you can implement authorization later on in the chapter. Authorization basically ensures that the user has access or permissions to do whatever they are requesting to do. In our app, this is done by an admin flag to differentiate between two types of users.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/sessionRequestHandler.png" alt="sessionRequestHandler">
+</div>
+<div class="title">Figure 4. sessionRequestHandler function as outlined in code previously. hasSession? is simply a simplification for the following expression evaluation : <code>req.session &amp;&amp; req.session.user &amp;&amp; req.session.user.email</code></div>
+</div>
+<div class="paragraph">
+<p>Our app has two users : (a) registered user and (b) admin user. A registered user obtains permissions such as view more content on the screens of residences : add an article sections, a review section, and a comments section. Whereas, an admin user gains powerful dashboard that controls the contents of the app.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_create_user_account"><a class="anchor" href="#_secure_create_user_account"></a>Secure create user account</h2>
+<div class="sectionbody">
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/create-accnt-activity-screen.png" alt="Create account user flow">
+</div>
+<div class="title">Figure 5. Create account user flow design</div>
+</div>
+<div class="paragraph">
+<p>Similar coding process as the section on login user flow. First create a <code>get</code> route that would obtain the required handlebarsjs template and then pass into it the title and csrf token to the page. I passed the csrf token through because the page had a submission form on it.</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.get('/signup', csrfProtection, (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+    res.render('users/sign-up', { <i class="conum" data-value="2"></i><b>(2)</b>
+        title: `Create an account on Elderoost`, <i class="conum" data-value="3"></i><b>(3)</b>
+        csrfToken: req.csrfToken() <i class="conum" data-value="4"></i><b>(4)</b>
+    });
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add csrf protection that adds <code>csrfToken()</code> function to <code>req</code> object</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Render <code>views/users/sign-up.hbs</code> template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set title for the template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Pass csrf token to be used in sign-up form</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, I followed through with creating the sign-up template in handle bars. I wanted to user to sign up using an email address, username, and a password. The username will be able to be changed but email will not be unless the user emails us, the admins and we do that manually. Please notice that at the bottom of the form below I added a line about <em>privacy policy</em> and <em>terms of service</em>. You need something like this in your own app if you are serving customers from the EU or ones that comply with the GDPR.</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/sign-up.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;Create your free account
+    &lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper main__negative-top-margin"&gt;
+    &lt;div class="padding-left padding-right padding-top padding-bottom"&gt;
+      &lt;form action="/users/signup" method="POST"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;input type="hidden" name="_csrf" value="{{csrfToken}}"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="username"&gt;Username&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="username" name="username" type="text" class="input" required spellcheck="false" autocomplete="off"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="email"&gt;Email&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="email" name="email" type="email" class="input" required spellcheck="false" autocomplete="off"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="password"&gt;Password&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="password" name="password" type="password" class="input" required spellcheck="false"
+              autocomplete="off"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="button is-primary full-width" type="submit"&gt;Create account &lt;i class="fa fa-sign-in-alt"
+            aria-hidden="true"&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/form&gt;
+      &lt;p&gt;By registering, you agree to the &lt;a href="/privacy?ref=signup" class="main__wrapper__link"&gt;privacy policy&lt;/a&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+        and &lt;a href="/tos?ref=signup" class="main__wrapper__link"&gt;terms of service&lt;/a&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Route handler that will process this form</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Csrf protection token set as hidden field attribute</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Link to privacy policy and terms of service (optional but recommended for GDPR compliance)</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After writing the code, we can take a look at the produced UI :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-account-screen.png" alt="Create account screen">
+</div>
+<div class="title">Figure 6. Create account screen that requires a user to enter a username, email, and password values</div>
+</div>
+<div class="paragraph">
+<p>Now, that we can display the create account screen and enter data, we need to work on the route handler that will process this form and create an account if successful. Basically, all of our users are required to have an email address. Thus, we will assume that the user that is creating an account does not have an entry for their email address in our database. Based on model of our data, located in <code>models/user.js</code> our users also must have a unique username. If the email and username are not in our database then our creation of a user will not fail. Otherwise, the form will throw an error and redirect back to sign-up screen.</p>
+</div>
+<div class="paragraph">
+<p>The following step is processing the data from the create account form submission. We simply  create a new <code>post</code> route handler for the <code>POST</code> requests to <code>/users/signup</code> api point. Then we process the business logic as outlined before, and after a successful sign up we set the user session cookie and redirect them to their profile page.</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.post('/signup', csrfProtection, async (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  const { username, email, password } = req.body;
+  if (username &amp;&amp; email &amp;&amp; password) { <i class="conum" data-value="2"></i><b>(2)</b>
+    const user = await User.findOne({ where: { email: `${email}` } });
+    if (!user) { <i class="conum" data-value="3"></i><b>(3)</b>
+      const hash = await bcrypt.hash(password, saltRounds); <i class="conum" data-value="4"></i><b>(4)</b>
+      const _user = await User.create({ <i class="conum" data-value="5"></i><b>(5)</b>
+        username: username,
+        email: email,
+        password: hash
+      });
+      if (_user) {
+        const __user = {
+          username: _user.username,
+          email: _user.email,
+          is_admin: _user.is_admin
+        };
+        req.session.user = __user; <i class="conum" data-value="6"></i><b>(6)</b>
+        res.redirect('/users/profile');
+      } else {
+        res.redirect('/users/signup');
+      }
+    } else {
+      res.redirect('/users/signup');
+    }
+  } else {
+    res.redirect('/users/signup');
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Prior to working on the logic run csrf proctection</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Ensure user entered values for username, email, and password</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Ensure we don&#8217;t have a user with such email</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Create a password hash using <code>bcrypt</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Create new user</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Set <code>session</code> object to our user object</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please refer to <a href="#install-bcrypt">sign in</a> code for bcrypt and sessions explanation.
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_user_password_resets"><a class="anchor" href="#_secure_user_password_resets"></a>Secure user password resets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I built my token reset mechanism around a central requirement of my application where a user cannot change their email by default. This ensures that the user’s email is the source of truth for a user in my app. So, creating a password reset tool also depends on this requirement. I will be sending a reset token to the user via their registered email address. The user will have to enter this token on a screen in order to gain access to the password reset screen. In total, this action for resetting a password will require three screens :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>screen for the user to enter an email for gain a reset token by email</p>
+</li>
+<li>
+<p>screen with instructions what to do after step 1. In our case simply we will state that the user will need to check their email for a reset instructions. In the email we will have a link to our app with the reset token set for the user.</p>
+</li>
+<li>
+<p>screen for the user to set a new password. The only way to access this screen will be by using the newly generated reset token that the user received via our automatic email.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>So, lets begin working on the first screen by creating a new route that will be the home for this screen. In our case, the password reset screen lives at the <code>/users/forgot</code> route :</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">router.get('/forgot', csrfProtection, (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  res.render('users/forgot', { <i class="conum" data-value="2"></i><b>(2)</b>
+    title: `Reset password - Elderoost`, <i class="conum" data-value="3"></i><b>(3)</b>
+    csrfToken: req.csrfToken() <i class="conum" data-value="4"></i><b>(4)</b>
+  });
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add csrf protection that adds <code>csrfToken()</code> function to <code>req</code> object</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Render <code>views/users/forgot.hbs</code> template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set title for the template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Pass csrf token to be used in forgot form</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>and the password reset form for the first objective looks like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/forgot.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;Reset password&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper main__negative-top-margin"&gt;
+    &lt;div class="padding-left padding-right padding-top padding-bottom"&gt;
+      &lt;form action="/users/forgot" method="POST"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;input type="hidden" name="_csrf" value="{{csrfToken}}"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="email"&gt;Email&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="email" name="email" type="email" class="input" required spellcheck="false" autocomplete="off"&gt;
+            &lt;p class="help"&gt;If the email exists, we will reset your password and send an email with instructions for
+              creating a new password.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="button is-primary full-width" type="submit"&gt;Reset password&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Route that will handle this form submission</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Csrf token that we passed to the template</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/reset-password-screen.png" alt="Password reset screen">
+</div>
+<div class="title">Figure 7. Password reset screen</div>
+</div>
+<div class="paragraph">
+<p>The next step would be working on the logic for processing the form. Please notice that as a simple security precaution I do not want to notify the user that is doing reset if the reset was successful. I do not want bad actors to know if a specific email exists in my database or not. They could potentially do that if you send a message like <code>"This email does not exist"</code> for a failed password reset and no message for a successful reset. I suggest that a better message is like one I wrote in my form, <code>"If the email exists, we will reset your password and send an email with instructions for creating a new password."</code></p>
+</div>
+<div class="paragraph">
+<p>We will be using SendGrid service to send our emails in this section. I want the email to simply contain plain text message of the reset password token in the body of the email. Using SendGrid is very simple plus they allow up to 100 free emails to be sent daily. As a starter project or a small project, I think this will be enough for our transactional needs. Please register for an account and acquire their API key.</p>
+</div>
+<div class="paragraph">
+<p>To do that, go login to your account :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/sendgrid-login-screen.png" alt="SendGrid login screen">
+</div>
+<div class="title">Figure 8. SendGrid login screen</div>
+</div>
+<div class="paragraph">
+<p>Then, find the settings menu and go to the API key section right after logging in. In the API keys section, you will be able to create a new API key. When you will be prompted for access, I would go ahead and give it full access for now. Go ahead, and do that like so :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/sendgrid-api-screen.png" alt="SendGrid API Key Screen">
+</div>
+<div class="title">Figure 9. SendGrid API key screen</div>
+</div>
+<div class="paragraph">
+<p>Please take a moment and get acquainted with SendGrid and its offerings. Now that you have your SendGrid API key, we can go back to implementing our password reset logic.  Let’s set up the SendGrid library so that we can send an email later. First we install the library :</p>
+</div>
+<div class="listingblock">
+<div class="title">Install SendGrid library</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install --save @sendgrid/mail</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, we go ahead and import the library in the same <code>./routes/users.js</code> router handler that we have been working on for this Chapter. For the sake of simplicity, I included the API key as a variable in the code. Please <strong>do not</strong> do that in production and rather set it to an environmental variable like the commented out code suggests.</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const sgMail = require('@sendgrid/mail');
+const sgAPI = `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`;
+sgMail.setApiKey(sgAPI);
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY); <i class="conum" data-value="1"></i><b>(1)</b>
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In production environment, please use environmental variables and not inline the key in code</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now we are ready to send out emails and, thus, let’s go back to working on processing the reset password form.</p>
+</div>
+<div class="paragraph">
+<p>On the post request we are expecting only one input which we require and that is an email. If the email does not exist, we do nothing and send the user to the next page. If the email exists, I did not want to simply reset the users password. I wanted to create a token that the user would receive via email. The user would need to enter this token in another screen where they will be able to set a new password. The only way to get this token is via our automatic email that is sent by SendGrid. I format our simple email and send it out on successful reset. The token gets generated by a third party library called generate-password and I used length of 64 characters for our token. Hopefully this justification combined with the code below shines some light onto why the <code>Users</code> model had <code>reset_password_token</code> parameter.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/reset-password-activity-screen.png" alt="reset password activity screen">
+</div>
+<div class="title">Figure 10. Reset password and send email user flow design</div>
+</div>
+<div class="paragraph">
+<p>So go ahead and install this password generator</p>
+</div>
+<div class="listingblock">
+<div class="title">Install password-generator library</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install --save generate-password</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that, we can begin working on our logic. So go ahead, install the password generator in your code and start coding the business logic for the <code>POST</code> request to <code>/users/forgot</code> route :</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+const passGenerator = require('generate-password');
+...
+router.post('/forgot', csrfProtection, async (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  const { email } = req.body;
+  if (email) {
+    try {
+      const user = await User.findOne({ where: { email: `${email}` } });
+      if (user) {
+        const _pd = passGenerator.generate({ length: 64, numbers: true }); <i class="conum" data-value="2"></i><b>(2)</b>
+        user.reset_password_token = _pd;
+        await user.save(); <i class="conum" data-value="3"></i><b>(3)</b>
+        // send email async
+        const msg = {
+          to: `${user.email}`,
+          from: `alex.kluew@gmail.com`,
+          subject: 'Elderoost : Password Reset',
+          text: `To reset your password, please go to https://elderoostalpha.herokuapp.com/users/forgot/t/${_pd}`, <i class="conum" data-value="4"></i><b>(4)</b>
+          html: `&lt;strong&gt;To reset your password, please go to &lt;a 										 href="https://elderoostalpha.herokuapp.com/users/forgot/t/${_pd}"&gt;https://elderoostalpha.herokuapp.com/users/forgot/t/${_pd}&lt;/a&gt;&lt;/strong&gt;`
+        };
+        await sgMail.send(msg);	<i class="conum" data-value="5"></i><b>(5)</b>
+        res.render('users/forgot-after');
+      }
+    } catch (e) {
+      console.error(`ERRROR in POST /users/forgot : ${e}`);
+    }
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Csrf protection</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>After we found the user, generate a new reset password token</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set the <code>reset_password_token</code> and save the user</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Set the password token in the url for the user to visit</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Send the email with <code>msg</code> content to <code>user.email</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now we go ahead and create the after template that is going to be redirected to on a successful reset in <code>views/users/forgot-after.hbs</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/forgot-after.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;&lt;i class="fa fa-redo" aria-hidden="true"&gt;&lt;/i&gt; Reset password&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper main__negative-top-margin"&gt;
+    &lt;div class="padding-left padding-right padding-top padding-bottom"&gt;
+      &lt;p style="text-align:center;"&gt;If the email exists, we will reset your password and send an email with instructions
+        for creating a new
+        password.&lt;/p&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;p style="text-align:center;font-weight:100;"&gt;Go back &lt;a href="/?ref=forgot" class="main__wrapper__link"&gt;home&lt;/a&gt;.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Friendly message to the user that the password was reset if the email exists (it wasn&#8217;t as we set a reset token and not actually reset the password).</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Okay, so now the user can visit a page, submit an email to receive a reset token in, view instructions page after submission, and receive a password reset token in email.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/email-reset-password-screen.png" alt="Reset password email link">
+</div>
+<div class="title">Figure 11. Reset password email with reset password link</div>
+</div>
+<div class="paragraph">
+<p>If you were wondering, this is what the email looks like that was sent by our app. Notice that SendGrid changes your URL in the email and adds its own data. However, when a user clicks on the link then they get redirected exactly where the code tells them to go.</p>
+</div>
+<div class="paragraph">
+<p>Next, we need to proceed in creating the router handler for the token password reset, <code>/users/forgot/t/:token</code>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/email-reset-token-activity-screen.png" alt="email reset token activity screen">
+</div>
+<div class="title">Figure 12. User activity flow design for accessing set new password screen</div>
+</div>
+<div class="paragraph">
+<p>I did this by creating a route that takes the token itself as one of the parameters to access the reset password page. Thus, a random user cannot access our password reset page. The page is only accessible via an email. So, if a user enters the correct token then they will access the password reset page for that token. Lets build this out by creating first a get route, followed by creating the reset password template.</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">router.get('/forgot/t/:token', csrfProtection, async (req, res, next) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+  const { token } = req.params;
+  if (token &amp;&amp; token.length === 64) {
+    try {
+      const user = await User.findOne({
+        where: { reset_password_token: `${token}` } <i class="conum" data-value="2"></i><b>(2)</b>
+      });
+
+      if (user) {
+        res.render('users/forgot-token', { <i class="conum" data-value="3"></i><b>(3)</b>
+          title: `Set new password - Elderoost`,
+          token: token, <i class="conum" data-value="4"></i><b>(4)</b>
+          csrfToken: req.csrfToken()
+        });
+      }
+    } catch (e) {
+      console.error(`ERROR in /forgot/t/:token : ${e}`);
+    }
+  }
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add csrf protection as we will be displaying the reset password form</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The only way to access this page is with a token and the only way to get this token is from the `User&#8217;s email inbox. I look for the user with this token.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Once the user is found with the reset token, we redirect the user to the <code>views/users/forgot-token.hbs</code> template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>I pass the token to be used by our reset password form</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As you can notice, I pass the token to the next template that I will be displaying, <code>forgot-token.hbs</code>, which is the password reset form. In the form, I will use this token in a way that you will see below. Then, I will ask ask the user to confirm the email for which the password will be reset along with the new password. This way, before resetting any password and doing damage to a user’s experience, I need to receive the email and the password reset token from the user. So, the code form for the password reset form will look something like this</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/forgot-token.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;&lt;i class="fa fa-search" aria-hidden="true"&gt;&lt;/i&gt; Reset password&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper main__negative-top-margin"&gt;
+    &lt;div class="padding-left padding-right padding-top padding-bottom"&gt;
+      &lt;form action="/users/forgot/t/{{token}}" method="POST"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;input type="hidden" name="_csrf" value="{{csrfToken}}"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="email"&gt;Email&lt;/label&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="email" name="email" type="email" class="input" required spellcheck="false" autocomplete="off"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="password"&gt;New Password&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="password" name="password" type="password" class="input" required spellcheck="false"
+              autocomplete="off"&gt;
+            &lt;p class="help"&gt;Enter your new password.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="button is-primary full-width" type="submit"&gt;Set new password&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>There will be a route handler waiting for a <code>POST</code> request for the URL that contains the reset password token</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Add csrf protection for our reset password form</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Ask for the user&#8217;s email once again to confirm during the next step</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>That code looks like this</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/new-password-screen.png" alt="New password screen">
+</div>
+<div class="title">Figure 13. New password screen accessed via a link in a password reset email</div>
+</div>
+<div class="paragraph">
+<p>Now, lets move on to building the <code>POST</code> router handler that will be responsible for processing this form, resetting to a new password, and sending an email to the user stating that their password was recently reset.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/set-password-activity-screen.png" alt="set password activity screen">
+</div>
+<div class="title">Figure 14. Set new password activity flow design</div>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">router.post('/forgot/t/:token', csrfProtection, async (req, res, next) =&gt; {
+  const { token } = req.params;
+  const { email, password } = req.body;
+  if (token &amp;&amp; token.length === 64) {
+    if (email &amp;&amp; password) {
+      try {
+        const user = await User.findOne({
+          where: {
+            email: email,
+            reset_password_token: token,
+          },
+        });
+        if (user) {
+          const hash = await bcrypt.hash(password, saltRounds);
+          user.password = hash;
+          user.reset_password_token = '';
+          await user.save();
+          // send email async
+          const msg = {
+            to: `${user.email}`,
+            from: `alex.kluew@gmail.com`,
+            subject: 'Elderoost : Password was reset.',
+            text: `Hello, your password was recently reset. If you did recently reset your password, then please disregard this message. Otherwise, please contact us at alex.kluew@gmail.com about this email.`,
+            html: `Hello, your password was recently reset. If you did recently reset your password, then please disregard this message. Otherwise, please contact us at alex.kluew@gmail.com about this email.`,
+          };
+          await sgMail.send(msg);
+          res.redirect(`/users/signin?ref=password-reset`);
+        }
+      } catch (e) {
+        console.error(`ERROR in /forgot/t/:token : ${e}`);
+      }
+      res.redirect(`/forgot/t/${token}`);
+    }
+  }
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In case you were wondering this is what the email looks like this once the password was reset successfully :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/email-password-was-reset.png" alt="Password was reset email notification">
+</div>
+<div class="title">Figure 15. Password was reset email notification screen</div>
+</div>
+<div class="paragraph">
+<p>We used the <code>bcrypt</code> library to generate a new password hash using the newly provided password by the password reset form. In addition, I reset the value of the <code>reset_password_token</code> such that this function is only ran once and the token is reset after its use. After a successful password reset, I send an email to the user notifying them that their password was recently reset. It is a good security practice to send such an email to the user. Worst case scenario they get an additional email from you that they can delete or in a best case the user sees a password change that they did not initiate. Following the sent email using SendGrid, I redirect the user into the login page so that they can login to their account using their newly set password. If the password was not successful, I simply redirect the user back to the set new password form.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_profiles"><a class="anchor" href="#_user_profiles"></a>User profiles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>User profiles in our case are meant to be a starting place. It was deliberately decided into the construction of the user requirements that a user could not change an email address by themselves. It is our one rule in the application. Thus, if a user is requesting an email change they must go through the proper contact us channels.</p>
+</div>
+<div class="paragraph">
+<p>A user can, however, change their username and password. The password change is currently implemented via the password reset form. Whereas, the username can be changed via the profile screen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/profile-screen.png" alt="User profile screen">
+</div>
+<div class="title">Figure 16. Completed user profile screen</div>
+</div>
+<div class="paragraph">
+<p>Head over and create the following route handler</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.get('/profile', csrfProtection, (req, res, next) =&gt; {
+  if (req.user) { <i class="conum" data-value="1"></i><b>(1)</b>
+    res.render('users/profile', {
+      title: `My profile - Elderoost`,
+      csrfToken: req.csrfToken(),
+    });
+  } else {
+    res.redirect('/users/signin');
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Check that the user object is there before loading the template</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>and then go ahead and create the template for the profile screen</p>
+</div>
+<div class="listingblock">
+<div class="title">views/users/profile.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section class="main main-text-wrapper"&gt;
+  &lt;div class="main__wrapper-purple padding-left padding-right"&gt;
+    &lt;h1 class="main__wrapper-purple__text"&gt;Profile
+    &lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="main__wrapper main__negative-top-margin"&gt;
+    &lt;div class="padding-left padding-right padding-top padding-bottom"&gt;
+      &lt;form action="/users/profile" method="POST"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;input type="hidden" name="_csrf" value="{{csrfToken}}"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="username"&gt;Username&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="username" name="username" type="text" class="input" required spellcheck="false"
+              autocomplete="off" value={{user.username}}&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="email"&gt;Email&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="email" name="email" type="email" class="input" required spellcheck="false" autocomplete="off" value={{user.email}} readonly&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+            &lt;p class="help"&gt;Your email cannot be changed. Please contact us to do that.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="field"&gt;
+          &lt;label class="label" for="password"&gt;Password&lt;/label&gt;
+          &lt;div class="input-wrapper"&gt;
+            &lt;input id="password" name="password" type="password" class="input" required spellcheck="false" autocomplete="off"&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="button is-primary full-width" type="submit"&gt;Save &lt;i class="fa fa-save"
+            aria-hidden="true"&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Route handler that we will have to build to handle this form&#8217;s <code>POST</code> request to <code>/users/profile</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>csrf token</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>User data gathered from session data and can change their username</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Email is in a read-only mode and cannot be changed</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Require a password for the change to be implemented</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As you can see above, our <code>user</code> object appeared somehow magically?! It was passed on to the template through the code in our session data. More specifically, we have the code <code>req.locals.user</code> and <code>req.user</code> objects that has the data that we need to display in our user profile template.</p>
+</div>
+<div class="paragraph">
+<p>What is left over after displaying the template is to build the route handlers that will process the changes requested in our user profile form. Let&#8217;s head over and build that code</p>
+</div>
+<div class="listingblock">
+<div class="title">routes/users.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.post('/profile', csrfProtection, async (req, res, next) =&gt; {
+  const { username, email, password } = req.body;
+  if (username &amp;&amp; email &amp;&amp; password) {
+    // all good we can change the username
+    const user = await User.findOne({ where: { email: `${email}` } }); <i class="conum" data-value="1"></i><b>(1)</b>
+    if (user) {
+      const compare = await bcrypt.compare(password, user.password); <i class="conum" data-value="2"></i><b>(2)</b>
+      if (compare) {
+        if (user.username !== username) {
+          const _usernameExists = await User.findOne({
+            where: { username: `${username}` },
+          }); <i class="conum" data-value="3"></i><b>(3)</b>
+          if (!_usernameExists) {
+            const updatedUser = await User.update(
+              { username: username },
+              { where: { email: `${email}` } }
+            ); <i class="conum" data-value="4"></i><b>(4)</b>
+          }
+        }
+      }
+      res.redirect('/users/profile');
+    } else {
+      res.redirect('/users/logout');
+    }
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Find the user by email</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Check that the password for the user is correct</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Check that there are no other users with the same username</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Change the username for the user with the provided email address</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now, we have implemented all of the features to have a successful user with a user account. We, also, have built enough automation so a user can reset their passwords and change usernames without me having to intervene. Small wins that you can automate for the user are always a good idea to invest time into.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

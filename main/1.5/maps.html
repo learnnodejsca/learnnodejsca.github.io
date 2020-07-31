@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Maps :: Learn Node.js by Alex Kluew</title>
+    <link rel="canonical" href="https://course.learnnodejs.dev/main/1.5/maps.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173618647-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-173618647-1')</script>
+  </head>
+  <body class="article">
+<script async data-uid="b7a10c8563" src="https://wondrous-experimenter-4427.ck.page/b7a10c8563/index.js"></script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://course.learnnodejs.dev">Learn Node.js by Alex Kluew</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://gumroad.com/l/javascript" target="_blank">Buy on Gumroad</a>
+        <a class="navbar-item" href="https://leanpub.com/learnnodejs" target="_blank">Buy on LeanPub</a>
+        <a class="navbar-item" href="https://twitter.com/alexkluew_dev">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512">
+              <path fill="#57aaee"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+              </path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="main" data-version="1.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Learn Node.js</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Learn Node.js</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sequelize.js.html">Sequelize.js</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="seo.html">SEO</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="maps.html">Maps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="deployment.html">Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Learn Node.js</span>
+    <span class="version">1.5</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Learn Node.js</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li>Learn Node.js</li>
+    <li><a href="maps.html">Maps</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/learnnodejsca/learnnodejs/edit/master/main/modules/ROOT/pages/maps.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Maps</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+I will introduce you to GeoJSON format for passing data, Leaflet library for making maps, and Fuse for searching.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="https://leafletjs.com/">Leaflet</a> is perhaps not only a map library but the main component that is used everywhere throughout the Elderoost project. After all, Elderoost is built to be heavily visual, accessible, and responsive. Leaflet API is nicely documented and comes with tons of additional plugins. Two of these plugins, one for clustering points together and the other for powerful searching, will be introduced in this chapter. I use this library on the main screen and on each individual residence screen.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_leaflet_js"><a class="anchor" href="#_leaflet_js"></a>Leaflet.js</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://leafletjs.com/">Leaflet</a>  was selected as the default map library for my project because it just works, is open-source, and has a plethora of useful plugins. Creation of a map is simple, I just needed to imbed the following code in my handebarsjs page to request the library and its css code :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">...
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" /&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;script src="/javascripts/leaflet/leaflet.min.js"&gt;&lt;/script&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Leaflet library has some default styling that needs to be imported for everything to work</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The actual library is included with the source code for this book</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then I just needed to instantiate the map somewhere in the code; like this for example :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">...
+L.map("map", {
+  scrollWheelZoom: false
+}).setView([45.416191, -75.691727], 5)
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following section I will go through the construction of the map as it is shown above. The actual map is instantiated using GeoJSON data and grouped into clusters. In this section I simply wanted to show how easy  it is to work with Leaflet library.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See <a href="introduction.html#index-hbs" class="page">index.hbs</a> explanation</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="geoJSON"><a class="anchor" href="#geoJSON"></a>GeoJSON</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://geojson.org/">GeoJSON</a> is a specification format that tells us of a way to represent geographic data in JSON object form. You can see the format below and it stores data in two ways: (i) single features and (ii) feature collections. A feature is a collection of data that describes a geographic object like a point or a shape. In this project, we will be using this format to work with our data and describe our map. By using a format, I can ensure some data integrity for the future as well because formats rarely change. This way we can structure our data however we want on the server and send it to the client UI to simply display.</p>
+</div>
+<div class="paragraph">
+<p>In our project, there are several requirements when it comes to data attributes of a residence that I assume each one of the data points has : (i) name field, (ii) address field, (iii) latitude field, and (iv) longitude field. If you were looking just to experiment, I recommend having at least a name, latitude, and longitude attributes on a data model. The name field would be used as a separator.</p>
+</div>
+<div class="paragraph">
+<p>For a single entry, our <code>Feature</code> object should look like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">GeoJSON format for a Feature object</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  type: "Feature",
+  properties: {
+    name: "Canterbury Place Retirement Residence",
+    address: "1 Canterbury Place, North York, Ontario M2N 0G7",
+    slug: "canterbury-place-retirement-residence-ontario-reviews"
+  },
+  geometry: {
+    type: "Point",
+    coordinates: [
+      -79.414597,
+      43.771693
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the code above you can see that I am expressing a single residence object by its specific properties such as name, address, and id slug; and by its geometry which is a simple point located at a specific longitude and latitude.</p>
+</div>
+<div class="paragraph">
+<p>For a collection, more than 1, you simply wrap a bunch of these Feature objects in an array as a features property of the <code>FeatureCollection</code> object.</p>
+</div>
+<div class="listingblock">
+<div class="title">GeoJSON format for a FeatureCollection object</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  type: "FeatureCollection",
+  features: [
+    {
+         type: "Feature",
+         properties: {
+           name: "Canterbury Place Retirement Residence",
+           address: "1 Canterbury Place, North York, Ontario M2N 0G7",
+           slug: "canterbury-place-retirement-residence-ontario-reviews"
+       },
+      	  geometry: {
+           type: "Point",
+           coordinates: [
+            -79.414597,
+            43.771693
+           ]
+       }
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The way that this data is then used in the following.  Leaflet library has a constructor, a way to initiate the object, using GeoJSON data. This data must be in either <code>Feature</code> or <code>FeatureCollection</code> type.</p>
+</div>
+<div class="paragraph">
+<p>So, during map construction, I make a call to my api that sends back the <code>FeatureCollection</code> object. Then, I simply feed the ready data in Leaflet’s constructor and the map with data points appears.</p>
+</div>
+<div class="paragraph">
+<p>This is how the collection gets created on the server :</p>
+</div>
+<div id="geoJSON-data" class="listingblock">
+<div class="title">routes/residences.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+router.get('/api/', async (req, res, next) =&gt; {
+  try {
+    const residences = await Residence.findAll();
+    if (residences) {
+      const mapped = residences.map(residence =&gt; {
+        return {
+          type: 'Feature',
+          properties: {
+            name: residence.name,
+            address: residence.address,
+            slug: residence.slug
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [
+              Number(residence.longitude),
+              Number(residence.latitude)
+            ]
+          }
+        };
+      });
+      const result = {
+        type: 'FeatureCollection',
+        features: mapped
+      };
+      res.send(JSON.stringify(result));
+    }
+  } catch (_error) {
+    console.error(`error in /api/ : ${_error}`);
+    res.sendStatus(200);
+  }
+});
+...</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See <a href="introduction.html#index-hbs" class="page">index.hbs</a> explanation for GeoJSON data injestion</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_markers_vs_clusters_plugin"><a class="anchor" href="#_markers_vs_clusters_plugin"></a>Markers vs. Clusters plugin</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/marker-v-cluster-screen.png" alt="Marker vs. Cluster view">
+</div>
+<div class="title">Figure 1. Marker vs. cluster screen view</div>
+</div>
+<div class="paragraph">
+<p>This section is mainly optional as it requires adding a plugin to your project, but I did implement it in my projet Elderoost. When I began working on the project, I did not have many data points. Thus, when I was working with the map I did not notice any performance issues nor did I have any issues with locating individual residences. However, as my data grew, so did my data points. The amount of data made my project look like this without any clustering on it :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/unclustered-screen.png" alt="Leaflet.js map with unclustered data">
+</div>
+<div class="title">Figure 2. Leaflet.js map with unclustered data</div>
+</div>
+<div class="paragraph">
+<p>With so many data points crowding the map, it became much harder to browse the map and get any value out of it. In addition, it took much more time for the map and all of the data points to be generated. Plus, while it was generating the map, the performance of the entire app became sluggish.</p>
+</div>
+<div class="paragraph">
+<p>I went to the <a href="https://leafletjs.com/plugins.html">plugin section</a> of leaflet’s library and came across the clustering markers solution, <code>leaflet.markercluster.js</code>. I quickly downloaded the library and set it up in the code. As soon as I refreshed the page, everything became clustered and the page performance felt much snappier.</p>
+</div>
+<div class="paragraph">
+<p>To add clustering to our map is actually very simple. We first import the library plugin in the html:</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">...
+&lt;script src="/javascripts/leaflet-markercluster/leaflet.markercluster.js"&gt;&lt;/script&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then we load the required css by the library :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">...
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and finally put everything together in the handlebars template like so :</p>
+</div>
+<div class="listingblock">
+<div class="title">views/index.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">...
+  var newLayer = L.markerClusterGroup({ <i class="conum" data-value="1"></i><b>(1)</b>
+      chunkedLoading: true,
+      showCoverageOnHover: false
+  });
+  newLayer.addLayer(geoJSONLayer); <i class="conum" data-value="2"></i><b>(2)</b>
+  map.addLayer(newLayer); <i class="conum" data-value="3"></i><b>(3)</b>
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Instantiate the cluster group object</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Add geoJSON data that will be clustered</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Add everything to the map</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There we have it. Now the marker points, that we previously had individually displayed, will be automagically grouped together as needed into clusters. By clicking on the cluster the user will then zoom in on that cluster area and individual markers from that cluster will then appear.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See <a href="introduction.html#index-hbs" class="page">index.hbs</a> explanation</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_search_plugin"><a class="anchor" href="#_search_plugin"></a>Search Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://github.com/naomap/leaflet-fusesearch">leaflet-fusesearch</a> plugin is very easy to integrate and it works extremely well out of the box with minimum configurations needed. For these reasons alone, I introduced this library and a new feature into my map. This is a second search feature in my project that allows a user to search in my UI. This search is specific to the leaflet library and depends on the provided data to be in geoJSON format. Please note that this library depends on the <a href="https://github.com/krisk/Fuse">Fuse.js</a> fuzzy search library for its searching functionality. Therefore, we need to load fuse.js search prior to loading this search library.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/map-search-screen.png" alt="Map search plugin">
+</div>
+<div class="title">Figure 3. Leaflet.js search plugin</div>
+</div>
+<div class="paragraph">
+<p>The way that the search works is that it takes in geoJSON data during its instantiation and looks at each individual feature’s properties. In our case, each feature has a name, address, and slug properties. I have indexed each residence on its name and address properties. The slug property is useful for me only and it simply is used as an identifier for each residence during creation of a link. Thus, there is no need to search by the slug property.</p>
+</div>
+<div class="paragraph">
+<p>When a user begins typing, the results field shows data that matches by either name or address <a href="introduction.html#index-hbs-map" class="page">properties</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See <a href="introduction.html#index-hbs" class="page">index.hbs</a> explanation</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
