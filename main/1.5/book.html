@@ -49,13 +49,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Learn Node.js</span>
+    <span class="nav-text">Chapters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="sequelize.js.html">Sequelize.js</a>
+    <a class="nav-link" href="sequelize.js.html">Database</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="seo.html">SEO</a>
@@ -67,7 +67,7 @@
     <a class="nav-link" href="pagination.html">Pagination</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="users.html">Users</a>
+    <a class="nav-link" href="users.html">Authentication and Authorization</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="deployment.html">Deployment</a>
@@ -130,7 +130,7 @@
 <li><a href="#forms">7. Forms</a></li>
 </ul>
 </li>
-<li><a href="#_sequelize_js">Sequelize.js</a>
+<li><a href="#_database">Database</a>
 <ul class="sectlevel1">
 <li><a href="#_assumptions">8. Assumptions</a></li>
 <li><a href="#_configuration">9. Configuration</a></li>
@@ -163,7 +163,7 @@
 </ul>
 </li>
 <li><a href="#_pagination">Pagination</a></li>
-<li><a href="#_users_2">Users</a>
+<li><a href="#_authentication_and_authorization">Authentication and Authorization</a>
 <ul class="sectlevel1">
 <li><a href="#_secure_user_sign_in">21. Secure user sign-in</a>
 <ul class="sectlevel2">
@@ -1027,7 +1027,7 @@ router.post('/signin', csrfProtection, async (req, res, next) =&gt; { <i class="
 </div>
 </div>
 </div>
-<h1 id="_sequelize_js" class="sect0"><a class="anchor" href="#_sequelize_js"></a>Sequelize.js</h1>
+<h1 id="_database" class="sect0"><a class="anchor" href="#_database"></a>Database</h1>
 <div class="sect1">
 <h2 id="_assumptions"><a class="anchor" href="#_assumptions"></a>8. Assumptions</h2>
 <div class="sectionbody">
@@ -1042,8 +1042,18 @@ router.post('/signin', csrfProtection, async (req, res, next) =&gt; { <i class="
 <cite>https://sequelize.org/v5/</cite>
 </div>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup.</p>
+</li>
+<li>
+<p>Also, I assume that we will be using <a href="https://sequelize.org">sequelize.js</a> for the database communication layer.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup. What is great about sequelize is that it does not care about your underlying database. If database is supported, then you can switch databases by adjusting the configuration file and your code will mostly work the same.</p>
+<p>What is great about sequelize is that it does not care about your underlying database. If database is supported, then you can switch databases by adjusting the configuration file and your code will mostly work the same.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -2411,7 +2421,7 @@ res.render('residences/index', {
 </div>
 </div>
 </div>
-<h1 id="_users_2" class="sect0"><a class="anchor" href="#_users_2"></a>Users</h1>
+<h1 id="_authentication_and_authorization" class="sect0"><a class="anchor" href="#_authentication_and_authorization"></a>Authentication and Authorization</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="admonitionblock note">
