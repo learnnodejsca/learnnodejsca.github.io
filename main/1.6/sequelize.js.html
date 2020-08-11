@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Database :: Learn Node.js by Alex Kluew</title>
+    <title>Storage :: Learn Node.js by Alex Kluew</title>
     <link rel="canonical" href="https://learnnodejs.dev/main/1.6/sequelize.js.html">
     <link rel="prev" href="introduction.html">
     <link rel="next" href="seo.html">
@@ -68,10 +68,10 @@
     <a class="nav-link" href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="sequelize.js.html">Database</a>
+    <a class="nav-link" href="sequelize.js.html">Storage</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="seo.html">SEO</a>
+    <a class="nav-link" href="seo.html">Search Engine Optimization</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="maps.html">Maps</a>
@@ -116,17 +116,27 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Learn Node.js</a></li>
-    <li><a href="sequelize.js.html">Database</a></li>
+    <li><a href="sequelize.js.html">Storage</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/learnnodejsca/learnnodejs/edit/master/main/modules/ROOT/pages/sequelize.js.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Database</h1>
+<h1 class="page">Storage</h1>
 <div class="sect1">
 <h2 id="_assumptions"><a class="anchor" href="#_assumptions"></a>Assumptions</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup.</p>
+</li>
+<li>
+<p>Also, I assume that we will be using <a href="https://sequelize.org">sequelize.js</a> for the database communication layer.</p>
+</li>
+</ol>
+</div>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -137,16 +147,6 @@
 &#8212; Sequelize API Reference<br>
 <cite>https://sequelize.org/v5/</cite>
 </div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup.</p>
-</li>
-<li>
-<p>Also, I assume that we will be using <a href="https://sequelize.org">sequelize.js</a> for the database communication layer.</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
 <p>What is great about sequelize is that it does not care about your underlying database. If database is supported, then you can switch databases by adjusting the configuration file and your code will mostly work the same.</p>
@@ -544,7 +544,7 @@ module.exports = Residence;</code></pre>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="introduction.html">Introduction</a></span>
-  <span class="next"><a href="seo.html">SEO</a></span>
+  <span class="next"><a href="seo.html">Search Engine Optimization</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

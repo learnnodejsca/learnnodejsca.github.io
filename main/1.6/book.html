@@ -65,10 +65,10 @@
     <a class="nav-link" href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="sequelize.js.html">Database</a>
+    <a class="nav-link" href="sequelize.js.html">Storage</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="seo.html">SEO</a>
+    <a class="nav-link" href="seo.html">Search Engine Optimization</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="maps.html">Maps</a>
@@ -140,7 +140,7 @@
 <li><a href="#forms">7. Forms</a></li>
 </ul>
 </li>
-<li><a href="#_database">Database</a>
+<li><a href="#_storage">Storage</a>
 <ul class="sectlevel1">
 <li><a href="#_assumptions">8. Assumptions</a></li>
 <li><a href="#_configuration">9. Configuration</a></li>
@@ -155,7 +155,7 @@
 <li><a href="#_migrations">11. Migrations</a></li>
 </ul>
 </li>
-<li><a href="#_seo">SEO</a>
+<li><a href="#_search_engine_optimization">Search Engine Optimization</a>
 <ul class="sectlevel1">
 <li><a href="#_minimum_seo">12. Minimum SEO</a></li>
 <li><a href="#_schema_org">13. Schema.org</a></li>
@@ -1044,7 +1044,7 @@ router.post('/signin', csrfProtection, async (req, res, next) =&gt; { <i class="
 </div>
 </div>
 </div>
-<h1 id="_database" class="sect0"><a class="anchor" href="#_database"></a>Database</h1>
+<h1 id="_storage" class="sect0"><a class="anchor" href="#_storage"></a>Storage</h1>
 <div class="openblock partintro">
 <div class="content">
 Alex Kluew &lt;<a href="mailto:info@getaclue.me">info@getaclue.me</a>&gt;
@@ -1055,6 +1055,16 @@ Alex Kluew &lt;<a href="mailto:info@getaclue.me">info@getaclue.me</a>&gt;
 <div class="sect1">
 <h2 id="_assumptions"><a class="anchor" href="#_assumptions"></a>8. Assumptions</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup.</p>
+</li>
+<li>
+<p>Also, I assume that we will be using <a href="https://sequelize.org">sequelize.js</a> for the database communication layer.</p>
+</li>
+</ol>
+</div>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1065,16 +1075,6 @@ Alex Kluew &lt;<a href="mailto:info@getaclue.me">info@getaclue.me</a>&gt;
 &#8212; Sequelize API Reference<br>
 <cite>https://sequelize.org/v5/</cite>
 </div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>I assume that the database of choice, if different from <a href="https://www.postgresql.org/">PostgreSQL</a>, is setup.</p>
-</li>
-<li>
-<p>Also, I assume that we will be using <a href="https://sequelize.org">sequelize.js</a> for the database communication layer.</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
 <p>What is great about sequelize is that it does not care about your underlying database. If database is supported, then you can switch databases by adjusting the configuration file and your code will mostly work the same.</p>
@@ -1464,7 +1464,7 @@ module.exports = Residence;</code></pre>
 </div>
 </div>
 </div>
-<h1 id="_seo" class="sect0"><a class="anchor" href="#_seo"></a>SEO</h1>
+<h1 id="_search_engine_optimization" class="sect0"><a class="anchor" href="#_search_engine_optimization"></a>Search Engine Optimization</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
